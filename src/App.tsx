@@ -36,6 +36,50 @@ export default function App() {
     }
   }, [zoomLevel]);
 
+  // Touch Pinch Gesture (Dùng 2 ngón tay chụm / xòe để zoom chữ tự động dàn trang)
+  useEffect(() => {
+    let initialPinchDistance = 0;
+    let initialZoom = zoomLevel;
+
+    const getDistance = (touches: TouchList) => {
+      const dx = touches[0].clientX - touches[1].clientX;
+      const dy = touches[0].clientY - touches[1].clientY;
+      return Math.sqrt(dx * dx + dy * dy);
+    };
+
+    const handleTouchStart = (e: TouchEvent) => {
+      if (e.touches.length === 2) {
+        initialPinchDistance = getDistance(e.touches);
+        initialZoom = zoomLevel;
+      }
+    };
+
+    const handleTouchMove = (e: TouchEvent) => {
+      if (e.touches.length === 2 && initialPinchDistance > 0) {
+        const currentDistance = getDistance(e.touches);
+        const ratio = currentDistance / initialPinchDistance;
+        let newZoom = Math.round((initialZoom * ratio) / 5) * 5;
+        if (newZoom < 90) newZoom = 90;
+        if (newZoom > 160) newZoom = 160;
+        setZoomLevel(newZoom);
+      }
+    };
+
+    const handleTouchEnd = () => {
+      initialPinchDistance = 0;
+    };
+
+    window.addEventListener('touchstart', handleTouchStart, { passive: true });
+    window.addEventListener('touchmove', handleTouchMove, { passive: true });
+    window.addEventListener('touchend', handleTouchEnd, { passive: true });
+
+    return () => {
+      window.removeEventListener('touchstart', handleTouchStart);
+      window.removeEventListener('touchmove', handleTouchMove);
+      window.removeEventListener('touchend', handleTouchEnd);
+    };
+  }, [zoomLevel]);
+
   const handleIncreaseZoom = () => {
     const currentIdx = ZOOM_LEVELS.indexOf(zoomLevel);
     if (currentIdx < ZOOM_LEVELS.length - 1) {
