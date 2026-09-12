@@ -1,5 +1,9 @@
 @import "tailwindcss";
 
+:root {
+  --text-scale: 1;
+}
+
 @layer utilities {
   .perspective-1000 {
     perspective: 1000px;
@@ -23,10 +27,14 @@
   }
 }
 
-body {
+/* Auto-flow & Mobile Reflow Standards */
+html, body {
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
   overflow-x: hidden;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  -webkit-text-size-adjust: 100%;
 }
 
 button {
@@ -34,3 +42,31 @@ button {
   -webkit-user-select: none;
 }
 
+/* Dynamic Proportional Scaler Base */
+.dynamic-text-scaler {
+  font-size: calc(1rem * var(--text-scale, 1));
+  line-height: calc(1.5 + (var(--text-scale, 1) - 1) * 0.12);
+}
+
+.dynamic-text-scaler p, 
+.dynamic-text-scaler li, 
+.dynamic-text-scaler td, 
+.dynamic-text-scaler th, 
+.dynamic-text-scaler span, 
+.dynamic-text-scaler div,
+.dynamic-text-scaler h1,
+.dynamic-text-scaler h2,
+.dynamic-text-scaler h3,
+.dynamic-text-scaler h4 {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+/* Table auto-flow responsiveness */
+.responsive-table-wrapper {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
