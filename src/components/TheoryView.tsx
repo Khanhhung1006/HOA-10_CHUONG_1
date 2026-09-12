@@ -48,17 +48,16 @@ export const TheoryView: React.FC<TheoryViewProps> = ({
         <div className="absolute -right-8 -bottom-8 w-48 h-48 bg-cyan-500/20 rounded-full blur-2xl pointer-events-none" />
         <div className="relative z-10 space-y-3">
           <div className="flex flex-wrap items-center justify-between gap-2">
-            <span className="px-3 py-1 text-xs font-bold bg-amber-500/20 border border-amber-300/40 text-amber-200 rounded-full">
-              Bài {lesson.number} • SGK Kết nối tri thức
+            {/* Direct Badge: Bài [SỐ BÀI]: [TÊN BÀI] */}
+            <span className="px-3.5 py-1.5 text-xs sm:text-sm font-bold bg-amber-500/20 border border-amber-300/40 text-amber-200 rounded-full">
+              Bài {lesson.number}: {lesson.title}
             </span>
             <span className="text-xs text-amber-100/80 font-medium">
               {lesson.pageRange}
             </span>
           </div>
-          <h1 className="text-2xl sm:text-3xl font-extrabold tracking-tight text-white">
-            {lesson.title}
-          </h1>
-          <p className="text-sm sm:text-base text-cyan-100/90 max-w-2xl leading-relaxed">
+
+          <p className="text-sm sm:text-base text-cyan-100/90 max-w-2xl leading-relaxed pt-1">
             {lesson.description}
           </p>
 
