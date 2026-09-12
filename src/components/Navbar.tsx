@@ -16,7 +16,9 @@ import {
   BookMarked,
   Check,
   ZoomIn,
-  ZoomOut
+  ZoomOut,
+  RotateCcw,
+  Type
 } from 'lucide-react';
 import { soundEffects } from '../utils/audio';
 
@@ -48,6 +50,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onResetZoom,
 }) => {
   const [lessonMenuOpen, setLessonMenuOpen] = useState(false);
+  const [zoomMenuOpen, setZoomMenuOpen] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -60,6 +63,7 @@ export const Navbar: React.FC<NavbarProps> = ({
       } else if (currentScrollY > lastScrollY + 5 && currentScrollY > 70) {
         setHeaderVisible(false); // Hide when scrolling down
         setLessonMenuOpen(false);
+        setZoomMenuOpen(false);
       } else if (currentScrollY < lastScrollY - 5) {
         setHeaderVisible(true);  // Show when scrolling up
       }
@@ -99,6 +103,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={() => {
                   soundEffects.playClick();
                   setLessonMenuOpen(!lessonMenuOpen);
+                  setZoomMenuOpen(false);
                 }}
                 className="p-2 text-amber-950 bg-amber-100/80 hover:bg-amber-200/80 rounded-xl border border-amber-300/80 transition cursor-pointer select-none active:scale-95 flex items-center gap-1.5"
                 title="Danh sách Bài Học (Dấu 3 Gạch)"
@@ -128,6 +133,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 onClick={() => {
                   soundEffects.playClick();
                   setLessonMenuOpen(!lessonMenuOpen);
+                  setZoomMenuOpen(false);
                 }}
                 className="flex items-center gap-1.5 px-2.5 py-1 text-xs font-bold bg-cyan-50 text-cyan-900 rounded-xl border border-cyan-200/90 hover:bg-cyan-100 transition cursor-pointer max-w-[130px] sm:max-w-[180px] truncate"
                 title="Chuyển bài học"

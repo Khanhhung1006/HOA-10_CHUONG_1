@@ -27,9 +27,9 @@ export const bai1Data: Lesson = {
       tableData: {
         headers: ['Hạt', 'Kí hiệu', 'Khối lượng (kg)', 'Khối lượng (amu)', 'Điện tích (C)', 'Điện tích tương đối'],
         rows: [
-          ['Proton', 'p', '1,672 × 10^-27', '≈ 1', '+1,602 × 10^-19', '+1'],
-          ['Neutron', 'n', '1,675 × 10^-27', '≈ 1', '0', '0'],
-          ['Electron', 'e', '9,109 × 10^-31', '≈ 0,00055 (1/1837)', '-1,602 × 10^-19', '-1']
+          ['Proton', 'p', '1,672 × 10⁻²⁷', '≈ 1', '+1,602 × 10⁻¹⁹', '+1'],
+          ['Neutron', 'n', '1,675 × 10⁻²⁷', '≈ 1', '0', '0'],
+          ['Electron', 'e', '9,109 × 10⁻³¹', '≈ 0,00055 (1/1837)', '-1,602 × 10⁻¹⁹', '-1']
         ]
       },
       callout: {
@@ -42,23 +42,23 @@ export const bai1Data: Lesson = {
       id: 'sec1-2',
       title: '2. Kích thước và khối lượng của nguyên tử',
       content: [
-        'Kích thước nguyên tử là khoảng không gian tạo bởi sự chuyển động của các electron. Nếu coi nguyên tử như một khối cầu thì đường kính của nó chỉ khoảng 10^-10 m.',
+        'Kích thước nguyên tử là khoảng không gian tạo bởi sự chuyển động của các electron. Nếu coi nguyên tử như một khối cầu thì đường kính của nó chỉ khoảng 10⁻¹⁰ m.',
         'Đơn vị đo kích thước nhỏ: Đơn vị picomet (pm) hay Angström (Å):',
-        '1 pm = 10^-12 m ;  1 Å = 10^-10 m (1 Å = 100 pm).',
+        '1 pm = 10⁻¹² m ;  1 Å = 10⁻¹⁰ m (1 Å = 100 pm).',
         'Ví dụ: Nguyên tử Hydrogen có bán kính khoảng 53 pm.',
-        'Hạt nhân nguyên tử có đường kính khoảng 10^-2 pm (khoảng 10^-14 m), kích thước nhỏ hơn nguyên tử khoảng 10 000 lần.',
+        'Hạt nhân nguyên tử có đường kính khoảng 10⁻² pm (khoảng 10⁻¹⁴ m), kích thước nhỏ hơn nguyên tử khoảng 10 000 lần.',
         'Khối lượng nguyên tử được biểu diễn theo đơn vị khối lượng nguyên tử, kí hiệu amu (atomic mass unit):',
-        '1 amu được định nghĩa bằng 1/12 khối lượng 1 nguyên tử carbon-12 (carbon-12 có m = 19,926 × 10^-27 kg).',
-        '1 amu = (19,926 × 10^-27 kg) / 12 = 1,661 × 10^-27 kg.'
+        '1 amu được định nghĩa bằng 1/12 khối lượng 1 nguyên tử carbon-12 (carbon-12 có m = 19,926 × 10⁻²⁷ kg).',
+        '1 amu = (19,926 × 10⁻²⁷ kg) / 12 = 1,661 × 10⁻²⁷ kg.'
       ],
       keyPoints: [
-        '1 amu = 1,661 × 10^-27 kg = 1,661 × 10^-24 g.',
-        'Đường kính nguyên tử xấp xỉ 10^-10 m (1 Å), gấp khoảng 10.000 lần đường kính hạt nhân (10^-14 m).'
+        '1 amu = 1,661 × 10⁻²⁷ kg = 1,661 × 10⁻²⁴ g.',
+        'Đường kính nguyên tử xấp xỉ 10⁻¹⁰ m (1 Å), gấp khoảng 10.000 lần đường kính hạt nhân (10⁻¹⁴ m).'
       ],
       callout: {
         type: 'formula',
         title: 'Đổi đơn vị amu sang kg',
-        text: 'm (nguyên tử) = Khối lượng (amu) × 1,661 × 10^-27 kg'
+        text: 'm (nguyên tử) = Khối lượng (amu) × 1,661 × 10⁻²⁷ kg'
       }
     },
     {
@@ -110,7 +110,7 @@ export const bai1Data: Lesson = {
       id: 'fc1-5',
       lessonId: 'bai1',
       question: 'Hãy cho biết điện tích tương đối và điện tích theo Coulomb (C) của hạt proton, neutron, electron.',
-      answer: 'Proton: điện tích tương đối +1 (+1,602 × 10^-19 C). Electron: điện tích tương đối -1 (-1,602 × 10^-19 C). Neutron: 0 C (không mang điện).',
+      answer: 'Proton: điện tích tương đối +1 (+1,602 × 10⁻¹⁹ C). Electron: điện tích tương đối -1 (-1,602 × 10⁻¹⁹ C). Neutron: 0 C (không mang điện).',
       tag: 'Điện tích hạt'
     },
     {
@@ -138,21 +138,21 @@ export const bai1Data: Lesson = {
       id: 'fc1-9',
       lessonId: 'bai1',
       question: 'Kích thước đường kính nguyên tử xấp xỉ bao nhiêu m, Å, pm?',
-      answer: 'Đường kính nguyên tử khoảng 10^-10 m = 1 Å = 100 pm.',
+      answer: 'Đường kính nguyên tử khoảng 10⁻¹⁰ m = 1 Å = 100 pm.',
       tag: 'Kích thước nguyên tử'
     },
     {
       id: 'fc1-10',
       lessonId: 'bai1',
       question: 'Đường kính hạt nhân nhỏ hơn đường kính nguyên tử khoảng bao nhiêu lần?',
-      answer: 'Đường kính hạt nhân (khoảng 10^-14 m hay 10^-2 pm) nhỏ hơn đường kính nguyên tử khoảng 10 000 lần.',
+      answer: 'Đường kính hạt nhân (khoảng 10⁻¹⁴ m hay 10⁻² pm) nhỏ hơn đường kính nguyên tử khoảng 10 000 lần.',
       tag: 'Kích thước nguyên tử'
     },
     {
       id: 'fc1-11',
       lessonId: 'bai1',
       question: '1 amu (đơn vị khối lượng nguyên tử) được định nghĩa như thế nào và bằng bao nhiêu kg?',
-      answer: '1 amu bằng 1/12 khối lượng của một nguyên tử carbon-12. 1 amu = 1,661 × 10^-27 kg.',
+      answer: '1 amu bằng 1/12 khối lượng của một nguyên tử carbon-12. 1 amu = 1,661 × 10⁻²⁷ kg.',
       tag: 'Đơn vị amu'
     },
     {
@@ -180,7 +180,7 @@ export const bai1Data: Lesson = {
       id: 'fc1-15',
       lessonId: 'bai1',
       question: 'Mối liên hệ giữa 1 Å và 1 pm là gì?',
-      answer: '1 Å = 10^-10 m; 1 pm = 10^-12 m ⇒ 1 Å = 100 pm.',
+      answer: '1 Å = 10⁻¹⁰ m; 1 pm = 10⁻¹² m ⇒ 1 Å = 100 pm.',
       tag: 'Đơn vị đo'
     },
     {
@@ -203,7 +203,7 @@ export const bai1Data: Lesson = {
         'Proton và neutron'
       ],
       correctAnswerIndex: 2,
-      explanation: 'Hầu hết các nguyên tử đều được cấu tạo từ 3 loại hạt cơ bản: proton (p) và neutron (n) nằm trong hạt nhân, cùng các electron (e) ở lớp vỏ. (Ngoại lệ duy nhất là đồng vị Protium 1-H1 hạt nhân không có neutron).',
+      explanation: 'Hầu hết các nguyên tử đều được cấu tạo từ 3 loại hạt cơ bản: proton (p) và neutron (n) nằm trong hạt nhân, cùng các electron (e) ở lớp vỏ. (Ngoại lệ duy nhất là đồng vị Protium ¹₁H hạt nhân không có neutron).',
       topicTag: 'Cấu tạo nguyên tử'
     },
     {
@@ -273,7 +273,7 @@ export const bai1Data: Lesson = {
         'Khối lượng hạt neutron gấp 1000 lần khối lượng hạt proton'
       ],
       correctAnswerIndex: 2,
-      explanation: 'Khối lượng của proton (1,672 × 10^-27 kg) và neutron (1,675 × 10^-27 kg) xấp xỉ bằng nhau và đều xấp xỉ 1 amu. Trong khi khối lượng electron rất nhỏ (9,109 × 10^-31 kg ≈ 0,00055 amu).',
+      explanation: 'Khối lượng của proton (1,672 × 10⁻²⁷ kg) và neutron (1,675 × 10⁻²⁷ kg) xấp xỉ bằng nhau và đều xấp xỉ 1 amu. Trong khi khối lượng electron rất nhỏ (9,109 × 10⁻³¹ kg ≈ 0,00055 amu).',
       topicTag: 'Khối lượng hạt'
     },
     {
@@ -281,13 +281,13 @@ export const bai1Data: Lesson = {
       lessonId: 'bai1',
       question: 'Khối lượng của 1 amu tính theo kg có giá trị bằng bao nhiêu?',
       options: [
-        '1,661 × 10^-24 kg',
-        '1,661 × 10^-27 kg',
-        '9,109 × 10^-31 kg',
-        '1,602 × 10^-19 kg'
+        '1,661 × 10⁻²⁴ kg',
+        '1,661 × 10⁻²⁷ kg',
+        '9,109 × 10⁻³¹ kg',
+        '1,602 × 10⁻¹⁹ kg'
       ],
       correctAnswerIndex: 1,
-      explanation: '1 amu được định nghĩa là 1/12 khối lượng nguyên tử C-12, có giá trị chuẩn là 1,661 × 10^-27 kg (hoặc 1,661 × 10^-24 g).',
+      explanation: '1 amu được định nghĩa là 1/12 khối lượng nguyên tử C-12, có giá trị chuẩn là 1,661 × 10⁻²⁷ kg (hoặc 1,661 × 10⁻²⁴ g).',
       topicTag: 'Đơn vị amu'
     },
     {
@@ -301,21 +301,21 @@ export const bai1Data: Lesson = {
         '1 pm = 100 Å'
       ],
       correctAnswerIndex: 1,
-      explanation: '1 Å = 10^-10 m, 1 pm = 10^-12 m. Do đó 1 Å = 10^-10 / 10^-12 = 100 pm.',
+      explanation: '1 Å = 10⁻¹⁰ m, 1 pm = 10⁻¹² m. Do đó 1 Å = 10⁻¹⁰ / 10⁻¹² = 100 pm.',
       topicTag: 'Đơn vị đo'
     },
     {
       id: 'q1-9',
       lessonId: 'bai1',
-      question: 'Nếu đường kính nguyên tử khoảng 10^-10 m thì đường kính hạt nhân xấp xỉ khoảng bao nhiêu?',
+      question: 'Nếu đường kính nguyên tử khoảng 10⁻¹⁰ m thì đường kính hạt nhân xấp xỉ khoảng bao nhiêu?',
       options: [
-        '10^-12 m',
-        '10^-14 m',
-        '10^-8 m',
-        '10^-16 m'
+        '10⁻¹² m',
+        '10⁻¹⁴ m',
+        '10⁻⁸ m',
+        '10⁻¹⁶ m'
       ],
       correctAnswerIndex: 1,
-      explanation: 'Kích thước đường kính hạt nhân nhỏ hơn kích thước nguyên tử khoảng 10 000 lần. Vì vậy nếu nguyên tử khoảng 10^-10 m (100 pm) thì hạt nhân khoảng 10^-14 m (10^-2 pm).',
+      explanation: 'Kích thước đường kính hạt nhân nhỏ hơn kích thước nguyên tử khoảng 10 000 lần. Vì vậy nếu nguyên tử khoảng 10⁻¹⁰ m (100 pm) thì hạt nhân khoảng 10⁻¹⁴ m (10⁻² pm).',
       topicTag: 'Kích thước nguyên tử'
     },
     {
@@ -407,13 +407,13 @@ export const bai1Data: Lesson = {
       lessonId: 'bai1',
       question: 'Phát biểu nào đúng khi nói về điện tích của hạt proton và electron?',
       options: [
-        'Proton mang điện tích +1,602 × 10^-19 C; electron mang điện tích -1,602 × 10^-19 C',
-        'Proton mang điện tích -1,602 × 10^-19 C; electron mang điện tích +1,602 × 10^-19 C',
-        'Cả proton và electron đều mang điện tích +1,602 × 10^-19 C',
+        'Proton mang điện tích +1,602 × 10⁻¹⁹ C; electron mang điện tích -1,602 × 10⁻¹⁹ C',
+        'Proton mang điện tích -1,602 × 10⁻¹⁹ C; electron mang điện tích +1,602 × 10⁻¹⁹ C',
+        'Cả proton và electron đều mang điện tích +1,602 × 10⁻¹⁹ C',
         'Proton có điện tích bằng 0, electron có điện tích -1 C'
       ],
       correctAnswerIndex: 0,
-      explanation: 'Hạt proton mang điện tích dương +1,602 × 10^-19 C (điện tích tương đối +1). Hạt electron mang điện tích âm -1,602 × 10^-19 C (điện tích tương đối -1).',
+      explanation: 'Hạt proton mang điện tích dương +1,602 × 10⁻¹⁹ C (điện tích tương đối +1). Hạt electron mang điện tích âm -1,602 × 10⁻¹⁹ C (điện tích tương đối -1).',
       topicTag: 'Điện tích hạt'
     }
   ]

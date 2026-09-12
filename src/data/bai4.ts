@@ -18,7 +18,7 @@ export const bai4Data: Lesson = {
         '• Lớp vỏ gồm: Electron (e, mang điện tích -1, m ≈ 0,00055 amu).',
         '• Trong nguyên tử trung hòa điện: Số p = Số e = Z (Số hiệu nguyên tử).',
         '• Số khối: A = Z + N (với N là số neutron).',
-        '• Kí hiệu nguyên tử: A_Z X.',
+        '• Kí hiệu nguyên tử: ᴬ_Z X.',
         'b) Nguyên tố hóa học và Đồng vị:',
         '• Nguyên tố hóa học là tập hợp các nguyên tử có cùng số hiệu nguyên tử Z.',
         '• Đồng vị là các nguyên tử có cùng số p (Z) nhưng khác số n (N) ⟹ khác số khối A.',
@@ -53,7 +53,7 @@ export const bai4Data: Lesson = {
         '★ Dạng 2: Bài tập Nguyên tử khối trung bình và Tỉ lệ % Đồng vị',
         '• Áp dụng Ā = (a × A1 + b × A2) / 100 với a + b = 100%.',
         '• Tìm % của đồng vị A1: a = [100 × (Ā - A2)] / (A1 - A2).',
-        '• Bài tập tính % khối lượng của một đồng vị trong một hợp chất (ví dụ: % 35-Cl trong CuCl2).',
+        '• Bài tập tính % khối lượng của một đồng vị trong một hợp chất (ví dụ: % ³⁵Cl trong CuCl₂).',
         '★ Dạng 3: Bài tập Cấu hình Electron và Vị trí - Tính chất',
         '• Từ Z ⟹ Viết cấu hình e ⟹ Xác định số e lớp ngoài cùng ⟹ Kết luận Kim loại/Phi kim/Khí hiếm.',
         '• Từ cấu hình e dạng thu gọn [Khí hiếm]... ⟹ Tính Z ⟹ Xác định nguyên tố.'
@@ -116,7 +116,7 @@ export const bai4Data: Lesson = {
     {
       id: 'fc4-7',
       lessonId: 'bai4',
-      question: 'Ví dụ: Chlorine có Ā = 35,5 với 2 đồng vị 35-Cl và 37-Cl. Tính phần trăm số nguyên tử của đồng vị 35-Cl.',
+      question: 'Ví dụ: Chlorine có Ā = 35,5 với 2 đồng vị ³⁵Cl và ³⁷Cl. Tính phần trăm số nguyên tử của đồng vị ³⁵Cl.',
       answer: '75,77% (vì 35,5 = [35a + 37(100 - a)]/100 ⟹ 2a = 151,54 ⟹ a = 75,77%).',
       tag: 'Tính % đồng vị'
     },
@@ -216,7 +216,7 @@ export const bai4Data: Lesson = {
     {
       id: 'q4-3',
       lessonId: 'bai4',
-      question: 'Trong tự nhiên, Bromine (Br) có 2 đồng vị là 79-Br và 81-Br với tỉ lệ phần trăm số nguyên tử tương ứng là 50,69% và 49,31%. Nguyên tử khối trung bình của Br là:',
+      question: 'Trong tự nhiên, Bromine (Br) có 2 đồng vị là ⁷⁹Br và ⁸¹Br với tỉ lệ phần trăm số nguyên tử tương ứng là 50,69% và 49,31%. Nguyên tử khối trung bình của Br là:',
       options: [
         '79,986',
         '80,000',
@@ -288,27 +288,27 @@ export const bai4Data: Lesson = {
       lessonId: 'bai4',
       question: 'Biết tổng số hạt cơ bản trong nguyên tử X là 36. Tìm kí hiệu nguyên tử của X (biết X thuộc Z ≤ 82).',
       options: [
-        '24_12 Mg',
-        '23_11 Na',
-        '27_13 Al',
-        '12_6 C'
+        '²⁴₁₂Mg',
+        '²³₁₁Na',
+        '²⁷₁₃Al',
+        '¹²₆C'
       ],
       correctAnswerIndex: 0,
-      explanation: 'Áp dụng công thức kẹp: S / 3,5 ≤ Z ≤ S / 3 ⇒ 36 / 3,5 ≤ Z ≤ 36 / 3 ⇒ 10,28 ≤ Z ≤ 12. Vì Z nguyên nên Z có thể là 11 hoặc 12.\n- Nếu Z = 11 ⇒ N = 36 - 2(11) = 14 ⇒ A = 25 (Loại Na-25 ít gặp).\n- Nếu Z = 12 ⇒ N = 36 - 2(12) = 12 ⇒ A = 12 + 12 = 24 (Thỏa mãn Magnesium 24-12 Mg).',
+      explanation: 'Áp dụng công thức kẹp: S / 3,5 ≤ Z ≤ S / 3 ⇒ 36 / 3,5 ≤ Z ≤ 36 / 3 ⇒ 10,28 ≤ Z ≤ 12. Vì Z nguyên nên Z có thể là 11 hoặc 12.\n- Nếu Z = 11 ⇒ N = 36 - 2(11) = 14 ⇒ A = 25 (Loại ²⁵Na ít gặp).\n- Nếu Z = 12 ⇒ N = 36 - 2(12) = 12 ⇒ A = 12 + 12 = 24 (Thỏa mãn Magnesium ²⁴₁₂Mg).',
       topicTag: 'Bài tập kẹp Z'
     },
     {
       id: 'q4-9',
       lessonId: 'bai4',
-      question: 'Nguyên tố Copper (Cu) có Ā = 63,546 gồm 2 đồng vị 63-Cu và 65-Cu. Tính số nguyên tử 63-Cu có trong 13,5 gam CuCl2 (cho Cu = 63,546; Cl = 35,5; N_A = 6,022 × 10^23).',
+      question: 'Nguyên tố Copper (Cu) có Ā = 63,546 gồm 2 đồng vị ⁶³Cu và ⁶⁵Cu. Tính số nguyên tử ⁶³Cu có trong 13,5 gam CuCl₂ (cho Cu = 63,546; Cl = 35,5; N_A = 6,022 × 10²³).',
       options: [
-        '4,38 × 10^22',
-        '6,02 × 10^22',
-        '1,63 × 10^23',
-        '2,19 × 10^22'
+        '4,38 × 10²²',
+        '6,02 × 10²²',
+        '1,63 × 10²³',
+        '2,19 × 10²²'
       ],
       correctAnswerIndex: 0,
-      explanation: 'n(CuCl2) = 13,5 / (63,546 + 71) = 13,5 / 134,546 = 0,1 mol ⟹ Số nguyên tử Cu = 0,1 × 6,022 × 10^23 = 6,022 × 10^22 nguyên tử.\n% số nguyên tử 63-Cu = [65 - 63,546] / (65 - 63) = 72,7%.\nSố nguyên tử 63-Cu = 6,022 × 10^22 × 72,7% = 4,378 × 10^22 ≈ 4,38 × 10^22 nguyên tử.',
+      explanation: 'n(CuCl₂) = 13,5 / (63,546 + 71) = 13,5 / 134,546 = 0,1 mol ⟹ Số nguyên tử Cu = 0,1 × 6,022 × 10²³ = 6,022 × 10²² nguyên tử.\n% số nguyên tử ⁶³Cu = [65 - 63,546] / (65 - 63) = 72,7%.\nSố nguyên tử ⁶³Cu = 6,022 × 10²² × 72,7% = 4,378 × 10²² ≈ 4,38 × 10²² nguyên tử.',
       topicTag: 'Bài tập đồng vị nâng cao'
     },
     {
@@ -384,7 +384,7 @@ export const bai4Data: Lesson = {
     {
       id: 'q4-15',
       lessonId: 'bai4',
-      question: 'Cho 3 nguyên tử: 12_6 C, 13_7 N, 14_8 O. Điểm GIỐNG NHAU giữa 3 nguyên tử này là:',
+      question: 'Cho 3 nguyên tử: ¹²₆C, ¹³₇N, ¹⁴₈O. Điểm GIỐNG NHAU giữa 3 nguyên tử này là:',
       options: [
         'Cùng số khối A',
         'Cùng số neutron N = 6',
@@ -392,13 +392,13 @@ export const bai4Data: Lesson = {
         'Cùng số electron ở vỏ'
       ],
       correctAnswerIndex: 1,
-      explanation: 'Tính số neutron N = A - Z:\n- 12_6 C: N = 12 - 6 = 6\n- 13_7 N: N = 13 - 7 = 6\n- 14_8 O: N = 14 - 8 = 6\nCả 3 nguyên tử này đều có số neutron N = 6.',
+      explanation: 'Tính số neutron N = A - Z:\n- ¹²₆C: N = 12 - 6 = 6\n- ¹³₇N: N = 13 - 7 = 6\n- ¹⁴₈O: N = 14 - 8 = 6\nCả 3 nguyên tử này đều có số neutron N = 6.',
       topicTag: 'Tính số n'
     },
     {
       id: 'q4-16',
       lessonId: 'bai4',
-      question: 'Nguyên tử khối trung bình của Argon là 39,95 amu. Hỏi trong 1 mol khí Argon ở điều kiện chuẩn có chứa bao nhiêu gam 40-Ar (biết 40-Ar chiếm 99,60% số nguyên tử)?',
+      question: 'Nguyên tử khối trung bình của Argon là 39,95 amu. Hỏi trong 1 mol khí Argon ở điều kiện chuẩn có chứa bao nhiêu gam ⁴⁰Ar (biết ⁴⁰Ar chiếm 99,60% số nguyên tử)?',
       options: [
         '39,84 gam',
         '39,95 gam',
@@ -406,7 +406,7 @@ export const bai4Data: Lesson = {
         '35,50 gam'
       ],
       correctAnswerIndex: 0,
-      explanation: '1 mol Argon có m = 39,95g (hoặc 1 mol Ar gồm 6,022 × 10^23 nguyên tử Ar). Số mol 40-Ar = 1 mol × 99,60% = 0,996 mol. Khối lượng của 40-Ar ≈ 0,996 mol × 40 g/mol = 39,84 gam.',
+      explanation: '1 mol Argon có m = 39,95g (hoặc 1 mol Ar gồm 6,022 × 10²³ nguyên tử Ar). Số mol ⁴⁰Ar = 1 mol × 99,60% = 0,996 mol. Khối lượng của ⁴⁰Ar ≈ 0,996 mol × 40 g/mol = 39,84 gam.',
       topicTag: 'Tính toán đồng vị'
     }
   ]

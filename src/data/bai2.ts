@@ -29,8 +29,8 @@ export const bai2Data: Lesson = {
         'Số đơn vị điện tích hạt nhân nguyên tử của một nguyên tố hoá học còn được gọi là số hiệu nguyên tử (Z) của nguyên tố đó.',
         'Số hiệu nguyên tử (Z) và số khối (A) là những đặc trưng cơ bản của một nguyên tử.',
         'Khi viết kí hiệu nguyên tử, đặt hai chỉ số đặc trưng ở bên trái kí hiệu nguyên tố X, trong đó số hiệu nguyên tử Z ở phía dưới và số khối A ở phía trên:',
-        'Dạng kí hiệu:  A_Z X  (hay  _Z^A X)',
-        'Ví dụ: Kí hiệu  4_2 He  cho biết: nguyên tử helium có kí hiệu He; số hiệu nguyên tử Z = 2 (hạt nhân có 2 proton, vỏ có 2 electron); số khối A = 4 (hạt nhân có số neutron N = 4 - 2 = 2).'
+        'Dạng kí hiệu:  ᴬ_Z X  (ví dụ: ⁴₂He, ²³₁₁Na)',
+        'Ví dụ: Kí hiệu  ⁴₂He  cho biết: nguyên tử helium có kí hiệu He; số hiệu nguyên tử Z = 2 (hạt nhân có 2 proton, vỏ có 2 electron); số khối A = 4 (hạt nhân có số neutron N = 4 - 2 = 2).'
       ],
       keyPoints: [
         'X: Kí hiệu hóa học của nguyên tố.',
@@ -40,7 +40,7 @@ export const bai2Data: Lesson = {
       callout: {
         type: 'formula',
         title: 'Kí hiệu nguyên tử đầy đủ',
-        text: 'A_Z X (Hoặc _Z^A X) ⟹ Số p = Z, Số e = Z, Số n = A - Z'
+        text: 'ᴬ_Z X (ví dụ: ⁴₂He) ⟹ Số p = Z, Số e = Z, Số n = A - Z'
       }
     },
     {
@@ -49,11 +49,11 @@ export const bai2Data: Lesson = {
       content: [
         'Một số nguyên tử có cùng số đơn vị điện tích hạt nhân (cùng số proton Z) nhưng có số neutron (N) khác nhau. Những nguyên tử như thế gọi là các đồng vị của một nguyên tố hoá học.',
         'Ví dụ: Nguyên tố Hydrogen có 3 đồng vị:',
-        '• Protium (1_1 H): 1 proton, 0 neutron, 1 electron.',
-        '• Deuterium (2_1 H hay D): 1 proton, 1 neutron, 1 electron.',
-        '• Tritium (3_1 H hay T): 1 proton, 2 neutron, 1 electron.',
-        'Các đồng vị khác nhau về số neutron nên khác nhau về khối lượng hạt nhân nguyên tử, đồng thời khác nhau về một số tính chất vật lí. Ví dụ: đơn chất 37_17 Cl có tỉ khối lớn hơn, nhiệt độ nóng chảy và nhiệt độ sôi cao hơn 35_17 Cl.',
-        'Ngoài các đồng vị bền, các nguyên tố hoá học còn có một số đồng vị không bền gọi là đồng vị phóng xạ (ví dụ: 14_6 C, 131_53 I,...), được ứng dụng rộng rãi trong y học, nông nghiệp, nghiên cứu khoa học.'
+        '• Protium (¹₁H): 1 proton, 0 neutron, 1 electron.',
+        '• Deuterium (²₁H hay D): 1 proton, 1 neutron, 1 electron.',
+        '• Tritium (³₁H hay T): 1 proton, 2 neutron, 1 electron.',
+        'Các đồng vị khác nhau về số neutron nên khác nhau về khối lượng hạt nhân nguyên tử, đồng thời khác nhau về một số tính chất vật lí. Ví dụ: đơn chất ³⁷₁₇Cl có tỉ khối lớn hơn, nhiệt độ nóng chảy và nhiệt độ sôi cao hơn ³⁵₁₇Cl.',
+        'Ngoài các đồng vị bền, các nguyên tố hoá học còn có một số đồng vị không bền gọi là đồng vị phóng xạ (ví dụ: ¹⁴₆C, ¹³¹₅₃I,...), được ứng dụng rộng rãi trong y học, nông nghiệp, nghiên cứu khoa học.'
       ],
       keyPoints: [
         'Các đồng vị có CÙNG số proton Z nhưng KHÁC số neutron N (dẫn đến khác số khối A).',
@@ -72,7 +72,7 @@ export const bai2Data: Lesson = {
         'Công thức tính nguyên tử khối trung bình:',
         'Ā = (a × A1 + b × A2 + c × A3 + ...) / 100',
         'Trong đó: A1, A2, A3... là số khối của các đồng vị; a, b, c... là phần trăm số nguyên tử tương ứng của mỗi đồng vị (sao cho a + b + c + ... = 100%).',
-        'Ví dụ: Chlorine trong tự nhiên có 2 đồng vị bền là 35_17 Cl (chiếm 75,77%) và 37_17 Cl (chiếm 24,23%).',
+        'Ví dụ: Chlorine trong tự nhiên có 2 đồng vị bền là ³⁵₁₇Cl (chiếm 75,77%) và ³⁷₁₇Cl (chiếm 24,23%).',
         'Ā(Cl) = (75,77 × 35 + 24,23 × 37) / 100 = 35,4846 ≈ 35,5 (amu).',
         'c) Phổ khối lượng (Mass Spectrometry): Bằng phương pháp phổ khối lượng, người ta xác định chính xác được các đồng vị và tỉ lệ phần trăm số nguyên tử của từng đồng vị trong tự nhiên.'
       ],
@@ -112,14 +112,14 @@ export const bai2Data: Lesson = {
     {
       id: 'fc2-4',
       lessonId: 'bai2',
-      question: 'Trong kí hiệu nguyên tử A_Z X, Z và A là gì?',
+      question: 'Trong kí hiệu nguyên tử ᴬ_Z X, Z và A là gì?',
       answer: 'X là kí hiệu hóa học nguyên tố; Z là số hiệu nguyên tử (số p = số e); A là số khối (A = Z + N).',
       tag: 'Kí hiệu nguyên tử'
     },
     {
       id: 'fc2-5',
       lessonId: 'bai2',
-      question: 'Cho kí hiệu nguyên tử 23_11 Na. Xác định số p, e, n và số khối A của Na.',
+      question: 'Cho kí hiệu nguyên tử ²³₁₁Na. Xác định số p, e, n và số khối A của Na.',
       answer: 'Số p = 11, số e = 11; Số khối A = 23; Số n = 23 - 11 = 12.',
       tag: 'Ví dụ kí hiệu'
     },
@@ -134,7 +134,7 @@ export const bai2Data: Lesson = {
       id: 'fc2-7',
       lessonId: 'bai2',
       question: 'Nguyên tố Hydrogen có mấy đồng vị chính? Tên gọi của chúng là gì?',
-      answer: 'Có 3 đồng vị: Protium (1_1 H), Deuterium (2_1 H hay D), Tritium (3_1 H hay T).',
+      answer: 'Có 3 đồng vị: Protium (¹₁H), Deuterium (²₁H hay D), Tritium (³₁H hay T).',
       tag: 'Đồng vị H'
     },
     {
@@ -148,7 +148,7 @@ export const bai2Data: Lesson = {
       id: 'fc2-9',
       lessonId: 'bai2',
       question: 'Đồng vị phóng xạ là gì và cho ví dụ?',
-      answer: 'Đồng vị phóng xạ là các đồng vị có hạt nhân không bền tự phân rã phóng ra các tia phóng xạ. Ví dụ: 14_6 C, 131_53 I.',
+      answer: 'Đồng vị phóng xạ là các đồng vị có hạt nhân không bền tự phân rã phóng ra các tia phóng xạ. Ví dụ: ¹⁴₆C, ¹³¹₅₃I.',
       tag: 'Đồng vị phóng xạ'
     },
     {
@@ -175,7 +175,7 @@ export const bai2Data: Lesson = {
     {
       id: 'fc2-13',
       lessonId: 'bai2',
-      question: 'Tính nguyên tử khối trung bình của Chlorine biết Cl có 2 đồng vị 35_17 Cl (75,77%) và 37_17 Cl (24,23%).',
+      question: 'Tính nguyên tử khối trung bình của Chlorine biết Cl có 2 đồng vị ³⁵₁₇Cl (75,77%) và ³⁷₁₇Cl (24,23%).',
       answer: 'Ā = (75,77 × 35 + 24,23 × 37) / 100 = 35,4846 ≈ 35,5 amu.',
       tag: 'Tính Ā'
     },
@@ -189,8 +189,8 @@ export const bai2Data: Lesson = {
     {
       id: 'fc2-15',
       lessonId: 'bai2',
-      question: 'Cu trong tự nhiên có 2 đồng vị 63_29 Cu và 65_29 Cu. Biết Ā = 63,54. Đồng vị nào chiếm tỉ lệ % lớn hơn?',
-      answer: 'Đồng vị 63_29 Cu chiếm tỉ lệ lớn hơn (khoảng 73%), vì Ā = 63,54 gần với số khối 63 hơn.',
+      question: 'Cu trong tự nhiên có 2 đồng vị ⁶³₂₉Cu và ⁶⁵₂₉Cu. Biết Ā = 63,54. Đồng vị nào chiếm tỉ lệ % lớn hơn?',
+      answer: 'Đồng vị ⁶³₂₉Cu chiếm tỉ lệ lớn hơn (khoảng 73%), vì Ā = 63,54 gần với số khối 63 hơn.',
       tag: 'Đồng vị Cu'
     },
     {
@@ -233,7 +233,7 @@ export const bai2Data: Lesson = {
     {
       id: 'q2-3',
       lessonId: 'bai2',
-      question: 'Kí hiệu nguyên tử 39_19 K cho biết Potassium có:',
+      question: 'Kí hiệu nguyên tử ³⁹₁₉K cho biết Potassium có:',
       options: [
         '19 p, 19 e, 39 n',
         '19 p, 19 e, 20 n',
@@ -241,7 +241,7 @@ export const bai2Data: Lesson = {
         '20 p, 19 e, 19 n'
       ],
       correctAnswerIndex: 1,
-      explanation: 'Kí hiệu 39_19 K có Z = 19 và A = 39. Số p = Z = 19, số e = Z = 19, số n = A - Z = 39 - 19 = 20.',
+      explanation: 'Kí hiệu ³⁹₁₉K có Z = 19 và A = 39. Số p = Z = 19, số e = Z = 19, số n = A - Z = 39 - 19 = 20.',
       topicTag: 'Kí hiệu nguyên tử'
     },
     {
@@ -275,7 +275,7 @@ export const bai2Data: Lesson = {
     {
       id: 'q2-6',
       lessonId: 'bai2',
-      question: 'Ba đồng vị tự nhiên của Hydrogen là Protium (1-H1), Deuterium (1-H2) và Tritium (1-H3) khác nhau về:',
+      question: 'Ba đồng vị tự nhiên của Hydrogen là Protium (¹₁H), Deuterium (²₁H) và Tritium (³₁H) khác nhau về:',
       options: [
         'Số electron ở lớp vỏ',
         'Số proton trong hạt nhân',
@@ -289,7 +289,7 @@ export const bai2Data: Lesson = {
     {
       id: 'q2-7',
       lessonId: 'bai2',
-      question: 'Neon (Ne) có 3 đồng vị: 20_10 Ne (90,0%), 21_10 Ne (0,3%) và 22_10 Ne (9,7%). Nguyên tử khối trung bình của Ne là:',
+      question: 'Neon (Ne) có 3 đồng vị: ²⁰₁₀Ne (90,0%), ²¹₁₀Ne (0,3%) và ²²₁₀Ne (9,7%). Nguyên tử khối trung bình của Ne là:',
       options: [
         '20,18',
         '20,80',
@@ -303,7 +303,7 @@ export const bai2Data: Lesson = {
     {
       id: 'q2-8',
       lessonId: 'bai2',
-      question: 'Copper (Cu) có nguyên tử khối trung bình là 63,546. Trong tự nhiên Cu có 2 đồng vị là 63_29 Cu và 65_29 Cu. Phần trăm số nguyên tử của đồng vị 63_29 Cu là:',
+      question: 'Copper (Cu) có nguyên tử khối trung bình là 63,546. Trong tự nhiên Cu có 2 đồng vị là ⁶³₂₉Cu và ⁶⁵₂₉Cu. Phần trăm số nguyên tử của đồng vị ⁶³₂₉Cu là:',
       options: [
         '27,3%',
         '72,7%',
@@ -311,13 +311,13 @@ export const bai2Data: Lesson = {
         '63,5%'
       ],
       correctAnswerIndex: 1,
-      explanation: 'Đặt % đồng vị 63-Cu là x (%), % đồng vị 65-Cu là (100 - x) (%). Ta có: Ā = [63x + 65(100 - x)] / 100 = 63,546 ⇒ 6500 - 2x = 6354,6 ⇒ 2x = 145,4 ⇒ x = 72,7%.',
+      explanation: 'Đặt % đồng vị ⁶³Cu là x (%), % đồng vị ⁶⁵Cu là (100 - x) (%). Ta có: Ā = [63x + 65(100 - x)] / 100 = 63,546 ⇒ 6500 - 2x = 6354,6 ⇒ 2x = 145,4 ⇒ x = 72,7%.',
       topicTag: 'Tính % đồng vị'
     },
     {
       id: 'q2-9',
       lessonId: 'bai2',
-      question: 'Kí hiệu nguyên tử 14_7 N cho biết nguyên tử Nitrogen có:',
+      question: 'Kí hiệu nguyên tử ¹⁴₇N cho biết nguyên tử Nitrogen có:',
       options: [
         'Số khối bằng 7, số hiệu nguyên tử bằng 14',
         'Số proton bằng 7, số neutron bằng 14',
@@ -331,7 +331,7 @@ export const bai2Data: Lesson = {
     {
       id: 'q2-10',
       lessonId: 'bai2',
-      question: 'Carbon có 2 đồng vị bền là 12_6 C (chiếm 98,89%) và 13_6 C (chiếm 1,11%). Nguyên tử khối trung bình của Carbon là:',
+      question: 'Carbon có 2 đồng vị bền là ¹²₆C (chiếm 98,89%) và ¹³₆C (chiếm 1,11%). Nguyên tử khối trung bình của Carbon là:',
       options: [
         '12,011',
         '12,500',
@@ -359,7 +359,7 @@ export const bai2Data: Lesson = {
     {
       id: 'q2-12',
       lessonId: 'bai2',
-      question: 'Nguyên tố Boron (B) có nguyên tử khối trung bình là 10,81. Boron có 2 đồng vị 10_5 B và 11_5 B. Tỉ lệ % số nguyên tử của đồng vị 11_5 B là:',
+      question: 'Nguyên tố Boron (B) có nguyên tử khối trung bình là 10,81. Boron có 2 đồng vị ¹⁰₅B và ¹¹₅B. Tỉ lệ % số nguyên tử của đồng vị ¹¹₅B là:',
       options: [
         '19%',
         '81%',
@@ -367,7 +367,7 @@ export const bai2Data: Lesson = {
         '75%'
       ],
       correctAnswerIndex: 1,
-      explanation: 'Gọi % của 10-B là x%, % của 11-B là (100 - x)%. Ta có: [10x + 11(100 - x)] / 100 = 10,81 ⇒ 1100 - x = 1081 ⇒ x = 19%. Vậy đồng vị 11-B chiếm 100 - 19 = 81%.',
+      explanation: 'Gọi % của ¹⁰B là x%, % của ¹¹B là (100 - x)%. Ta có: [10x + 11(100 - x)] / 100 = 10,81 ⇒ 1100 - x = 1081 ⇒ x = 19%. Vậy đồng vị ¹¹B chiếm 100 - 19 = 81%.',
       topicTag: 'Tính % đồng vị'
     },
     {
@@ -387,7 +387,7 @@ export const bai2Data: Lesson = {
     {
       id: 'q2-14',
       lessonId: 'bai2',
-      question: 'Biết Argon (Ar) có 3 đồng vị: 36-Ar (0,34%), 38-Ar (0,06%), 40-Ar (99,60%). Nguyên tử khối trung bình của Ar là:',
+      question: 'Biết Argon (Ar) có 3 đồng vị: ³⁶₁₈Ar (0,34%), ³⁸₁₈Ar (0,06%), ⁴⁰₁₈Ar (99,60%). Nguyên tử khối trung bình của Ar là:',
       options: [
         '39,948',
         '38,000',
@@ -401,7 +401,7 @@ export const bai2Data: Lesson = {
     {
       id: 'q2-15',
       lessonId: 'bai2',
-      question: 'Đồng vị phóng xạ 131_53 I thường được ứng dụng trong y học để:',
+      question: 'Đồng vị phóng xạ ¹³¹₅₃I thường được ứng dụng trong y học để:',
       options: [
         'Điều trị bệnh lý tuyến giáp (như ung thư tuyến giáp, bướu cổ)',
         'Chụp X-quang xương',
@@ -409,13 +409,13 @@ export const bai2Data: Lesson = {
         'Khử trùng dụng cụ phẫu thuật'
       ],
       correctAnswerIndex: 0,
-      explanation: 'SGK trang 107 ("Em có biết"): Đồng vị phóng xạ 131-I được dùng trong y học để chẩn đoán và điều trị các bệnh lý tuyến giáp như ung thư tuyến giáp, cường giáp.',
+      explanation: 'SGK trang 107 ("Em có biết"): Đồng vị phóng xạ ¹³¹I được dùng trong y học để chẩn đoán và điều trị các bệnh lý tuyến giáp như ung thư tuyến giáp, cường giáp.',
       topicTag: 'Ứng dụng đồng vị'
     },
     {
       id: 'q2-16',
       lessonId: 'bai2',
-      question: 'Một mẫu Lithium chứa 2 đồng vị 6_3 Li và 7_3 Li. Biết nguyên tử khối trung bình của Li là 6,94. Tỉ lệ số nguyên tử của 6_3 Li : 7_3 Li là:',
+      question: 'Một mẫu Lithium chứa 2 đồng vị ⁶₃Li và ⁷₃Li. Biết nguyên tử khối trung bình của Li là 6,94. Tỉ lệ số nguyên tử của ⁶₃Li : ⁷₃Li là:',
       options: [
         '6 : 94',
         '94 : 6',
@@ -423,8 +423,8 @@ export const bai2Data: Lesson = {
         '12 : 88'
       ],
       correctAnswerIndex: 0,
-      explanation: 'Gọi % của 6-Li là x ⇒ [6x + 7(100 - x)] / 100 = 6,94 ⇒ 700 - x = 694 ⇒ x = 6%. Đồng vị 7-Li chiếm 94%. Tỉ lệ 6-Li : 7-Li = 6 : 94 (hay 3 : 47).',
+      explanation: 'Gọi % của ⁶Li là x ⇒ [6x + 7(100 - x)] / 100 = 6,94 ⇒ 700 - x = 694 ⇒ x = 6%. Đồng vị ⁷Li chiếm 94%. Tỉ lệ ⁶Li : ⁷Li = 6 : 94 (hay 3 : 47).',
       topicTag: 'Tính % đồng vị'
-    }
+    },
   ]
 };
