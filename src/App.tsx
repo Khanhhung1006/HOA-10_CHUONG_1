@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { LessonId, ViewMode } from './types';
 import { lessonsData, getLessonById, totalChapterFlashcards } from './data';
 import { useProgress } from './utils/useProgress';
@@ -8,12 +8,55 @@ import { FlashcardView } from './components/FlashcardView';
 import { QuizView } from './components/QuizView';
 import { ProgressDashboard } from './components/ProgressDashboard';
 import { PeriodicTableModal } from './components/PeriodicTableModal';
-import { BookOpen, BrainCircuit, CheckCircle2, Atom, Sparkles } from 'lucide-react';
+import { Atom } from 'lucide-react';
+
+const ZOOM_LEVELS = [90, 100, 110, 125, 140, 160];
 
 export default function App() {
   const [currentLessonId, setCurrentLessonId] = useState<LessonId>('bai1');
   const [currentView, setCurrentView] = useState<ViewMode>('theory');
   const [isPeriodicTableOpen, setIsPeriodicTableOpen] = useState(false);
+  
+  // Font Zoom state (persisted in localStorage)
+  const [zoomLevel, setZoomLevel] = useState<number>(() => {
+    try {
+      const saved = localStorage.getItem('hoa10_zoom_level');
+      if (saved) return parseInt(saved, 10) || 100;
+    } catch (e) {
+      // ignore
+    }
+    return 100;
+  });
+
+  useEffect(() => {
+    try {
+      localStorage.setItem('hoa10_zoom_level', zoomLevel.toString());
+    } catch (e) {
+      // ignore
+    }
+  }, [zoomLevel]);
+
+  const handleIncreaseZoom = () => {
+    const currentIdx = ZOOM_LEVELS.indexOf(zoomLevel);
+    if (currentIdx < ZOOM_LEVELS.length - 1) {
+      setZoomLevel(ZOOM_LEVELS[currentIdx + 1]);
+    } else if (zoomLevel < 160) {
+      setZoomLevel(160);
+    }
+  };
+
+  const handleDecreaseZoom = () => {
+    const currentIdx = ZOOM_LEVELS.indexOf(zoomLevel);
+    if (currentIdx > 0) {
+      setZoomLevel(ZOOM_LEVELS[currentIdx - 1]);
+    } else if (zoomLevel > 90) {
+      setZoomLevel(90);
+    }
+  };
+
+  const handleResetZoom = () => {
+    setZoomLevel(100);
+  };
 
   const {
     progress,
@@ -34,7 +77,7 @@ export default function App() {
   const totalLearnedCards = progress.learnedFlashcardIds.length;
 
   return (
-    <div className="min-h-screen bg-[#FAF7F2] text-amber-950 flex flex-col font-sans selection:bg-cyan-500 selection:text-white pb-12">
+    <div className="min-h-screen bg-[#FAF7F2] text-amber-950 flex flex-col font-sans selection:bg-cyan-500 selection:text-white pb-12 w-full max-w-full overflow-x-hidden">
       {/* Sticky Top Navbar */}
       <Navbar
         currentLessonId={currentLessonId}
@@ -44,10 +87,17 @@ export default function App() {
         learnedCount={totalLearnedCards}
         totalCards={totalChapterFlashcards}
         onOpenPeriodicTable={() => setIsPeriodicTableOpen(true)}
+        zoomLevel={zoomLevel}
+        onIncreaseZoom={handleIncreaseZoom}
+        onDecreaseZoom={handleDecreaseZoom}
+        onResetZoom={handleResetZoom}
       />
 
-      {/* Main Content Area */}
-      <main className="flex-1">
+      {/* Main Content Area with Dynamic Zoom & Auto Reflow */}
+      <main 
+        className="flex-1 w-full max-w-full overflow-x-hidden break-words transition-all duration-200"
+        style={{ fontSize: `${zoomLevel / 100}rem` }}
+      >
         {currentView === 'theory' && (
           <TheoryView
             lesson={currentLesson}
@@ -94,7 +144,7 @@ export default function App() {
       />
 
       {/* Footer */}
-      <footer className="mt-12 border-t border-amber-200/80 bg-[#FFFDF9] py-6 text-center text-xs text-amber-800/80 space-y-1">
+      <footer className="mt-12 border-t border-amber-200/80 bg-[#FFFDF9] py-6 text-center text-xs text-amber-800/80 space-y-1 w-full">
         <div className="flex items-center justify-center gap-2 font-bold text-amber-950 text-sm">
           <Atom className="w-4 h-4 text-cyan-700" />
           <span>ÔN TẬP CHƯƠNG 1 - HÓA 10</span>
