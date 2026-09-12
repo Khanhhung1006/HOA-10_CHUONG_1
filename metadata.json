@@ -1,0 +1,6 @@
+{
+  "name": "Ôn Tập Hóa 10 - Chương 1",
+  "description": "Ứng dụng ôn tập toàn diện chương 1 Hóa học 10 (Cấu tạo nguyên tử) với tóm tắt lý thuyết, flashcards và bài tập trắc nghiệm giải thích chi tiết.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
