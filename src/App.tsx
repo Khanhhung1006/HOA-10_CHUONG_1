@@ -93,10 +93,13 @@ export default function App() {
         onResetZoom={handleResetZoom}
       />
 
-      {/* Main Content Area with Dynamic Zoom & Auto Reflow */}
+      {/* Main Content Area with Dynamic Proportional Font Scaler & Auto-Flow Layout */}
       <main 
-        className="flex-1 w-full max-w-full overflow-x-hidden break-words transition-all duration-200"
-        style={{ fontSize: `${zoomLevel / 100}rem` }}
+        className="flex-1 w-full max-w-full overflow-x-hidden break-words transition-all duration-200 dynamic-text-scaler"
+        style={{ 
+          fontSize: `${zoomLevel / 100}rem`,
+          '--text-scale': zoomLevel / 100
+        } as React.CSSProperties}
       >
         {currentView === 'theory' && (
           <TheoryView
