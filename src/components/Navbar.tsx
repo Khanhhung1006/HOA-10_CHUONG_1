@@ -14,7 +14,9 @@ import {
   ChevronUp,
   ChevronDown,
   BookMarked,
-  Check
+  Check,
+  ZoomIn,
+  ZoomOut
 } from 'lucide-react';
 import { soundEffects } from '../utils/audio';
 
@@ -26,6 +28,10 @@ interface NavbarProps {
   learnedCount: number;
   totalCards: number;
   onOpenPeriodicTable: () => void;
+  zoomLevel: number;
+  onIncreaseZoom: () => void;
+  onDecreaseZoom: () => void;
+  onResetZoom: () => void;
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
@@ -36,6 +42,10 @@ export const Navbar: React.FC<NavbarProps> = ({
   learnedCount,
   totalCards,
   onOpenPeriodicTable,
+  zoomLevel,
+  onIncreaseZoom,
+  onDecreaseZoom,
+  onResetZoom,
 }) => {
   const [lessonMenuOpen, setLessonMenuOpen] = useState(false);
   const [headerVisible, setHeaderVisible] = useState(true);
@@ -119,7 +129,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                   soundEffects.playClick();
                   setLessonMenuOpen(!lessonMenuOpen);
                 }}
-                className="flex items-center gap-1.5 px-2.5 py-1 text-xs font-bold bg-cyan-50 text-cyan-900 rounded-xl border border-cyan-200/90 hover:bg-cyan-100 transition cursor-pointer max-w-[140px] sm:max-w-[200px] truncate"
+                className="flex items-center gap-1.5 px-2.5 py-1 text-xs font-bold bg-cyan-50 text-cyan-900 rounded-xl border border-cyan-200/90 hover:bg-cyan-100 transition cursor-pointer max-w-[130px] sm:max-w-[180px] truncate"
                 title="Chuyển bài học"
               >
                 <span className="w-4 h-4 rounded-full bg-cyan-700 text-white text-[10px] flex items-center justify-center font-bold shrink-0">
@@ -134,7 +144,7 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div className="flex items-center gap-1 bg-amber-200/60 p-1 rounded-xl border border-amber-300/60 shrink-0">
               <button
                 onClick={() => handleViewChange('theory')}
-                className={`flex items-center gap-1 px-2.5 py-1 text-[11px] sm:text-xs font-bold rounded-lg transition-all select-none cursor-pointer active:scale-95 ${
+                className={`flex items-center gap-1 px-2 py-1 text-[11px] sm:text-xs font-bold rounded-lg transition-all select-none cursor-pointer active:scale-95 ${
                   currentView === 'theory'
                     ? 'bg-white text-cyan-800 shadow-2xs'
                     : 'text-amber-950 hover:text-cyan-800'
@@ -147,7 +157,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
               <button
                 onClick={() => handleViewChange('flashcards')}
-                className={`flex items-center gap-1 px-2.5 py-1 text-[11px] sm:text-xs font-bold rounded-lg transition-all select-none cursor-pointer active:scale-95 ${
+                className={`flex items-center gap-1 px-2 py-1 text-[11px] sm:text-xs font-bold rounded-lg transition-all select-none cursor-pointer active:scale-95 ${
                   currentView === 'flashcards'
                     ? 'bg-white text-cyan-800 shadow-2xs'
                     : 'text-amber-950 hover:text-cyan-800'
@@ -160,7 +170,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
               <button
                 onClick={() => handleViewChange('quiz')}
-                className={`flex items-center gap-1 px-2.5 py-1 text-[11px] sm:text-xs font-bold rounded-lg transition-all select-none cursor-pointer active:scale-95 ${
+                className={`flex items-center gap-1 px-2 py-1 text-[11px] sm:text-xs font-bold rounded-lg transition-all select-none cursor-pointer active:scale-95 ${
                   currentView === 'quiz'
                     ? 'bg-white text-cyan-800 shadow-2xs'
                     : 'text-amber-950 hover:text-cyan-800'
@@ -173,7 +183,7 @@ export const Navbar: React.FC<NavbarProps> = ({
 
               <button
                 onClick={() => handleViewChange('progress')}
-                className={`flex items-center gap-1 px-2.5 py-1 text-[11px] sm:text-xs font-bold rounded-lg transition-all select-none cursor-pointer active:scale-95 ${
+                className={`flex items-center gap-1 px-2 py-1 text-[11px] sm:text-xs font-bold rounded-lg transition-all select-none cursor-pointer active:scale-95 ${
                   currentView === 'progress'
                     ? 'bg-white text-cyan-800 shadow-2xs'
                     : 'text-amber-950 hover:text-cyan-800'
@@ -185,14 +195,55 @@ export const Navbar: React.FC<NavbarProps> = ({
               </button>
             </div>
 
-            {/* TOP RIGHT: Quick Periodic Table Button */}
-            <div className="hidden sm:flex items-center gap-2">
+            {/* TOP RIGHT: TEXT ZOOM CONTROL + Periodic Table */}
+            <div className="flex items-center gap-1.5 shrink-0">
+              {/* FEATURE: Zoom chữ dàn trang tự động */}
+              <div className="flex items-center gap-0.5 bg-amber-100/90 border border-amber-300/80 p-0.5 rounded-xl shadow-2xs">
+                <button
+                  onClick={() => {
+                    soundEffects.playClick();
+                    onDecreaseZoom();
+                  }}
+                  disabled={zoomLevel <= 90}
+                  className="px-2 py-1 text-xs font-extrabold text-amber-950 hover:bg-amber-200 rounded-lg transition cursor-pointer select-none active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed flex items-center gap-0.5"
+                  title="Giảm cỡ chữ (Zoom Out)"
+                >
+                  <ZoomOut className="w-3.5 h-3.5 text-amber-900" />
+                  <span className="text-[10px]">A-</span>
+                </button>
+
+                <span 
+                  onClick={() => {
+                    soundEffects.playClick();
+                    onResetZoom();
+                  }}
+                  className="px-1.5 text-[11px] font-bold text-cyan-800 cursor-pointer hover:underline select-none"
+                  title="Bấm để đặt lại cỡ chữ 100%"
+                >
+                  {zoomLevel}%
+                </span>
+
+                <button
+                  onClick={() => {
+                    soundEffects.playClick();
+                    onIncreaseZoom();
+                  }}
+                  disabled={zoomLevel >= 160}
+                  className="px-2 py-1 text-xs font-extrabold text-amber-950 hover:bg-amber-200 rounded-lg transition cursor-pointer select-none active:scale-95 disabled:opacity-30 disabled:cursor-not-allowed flex items-center gap-0.5"
+                  title="Tăng cỡ chữ (Zoom In - Tự động dàn trang)"
+                >
+                  <span className="text-[10px]">A+</span>
+                  <ZoomIn className="w-3.5 h-3.5 text-cyan-800" />
+                </button>
+              </div>
+
+              {/* Quick Periodic Table Button */}
               <button
                 onClick={() => {
                   soundEffects.playClick();
                   onOpenPeriodicTable();
                 }}
-                className="flex items-center gap-1.5 px-2.5 py-1 text-xs font-bold text-amber-900 bg-amber-100/70 hover:bg-amber-200/80 border border-amber-300/80 rounded-lg shadow-2xs transition cursor-pointer select-none active:scale-95"
+                className="hidden sm:flex items-center gap-1 px-2.5 py-1 text-xs font-bold text-amber-900 bg-amber-100/70 hover:bg-amber-200/80 border border-amber-300/80 rounded-xl shadow-2xs transition cursor-pointer select-none active:scale-95"
                 title="Tra cứu 20 Nguyên tố (Z=1-20)"
               >
                 <Table2 className="w-3.5 h-3.5 text-cyan-700" />
