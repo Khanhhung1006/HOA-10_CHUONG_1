@@ -1,6 +1,6 @@
 {
-  "name": "Ôn Tập Hóa 10 - Chương 1",
-  "description": "Ứng dụng ôn tập toàn diện chương 1 Hóa học 10 (Cấu tạo nguyên tử) với tóm tắt lý thuyết, flashcards và bài tập trắc nghiệm giải thích chi tiết.",
+  "name": "Ôn Tập Hoá Học 11 - Chương 1: Cân Bằng Hoá Học",
+  "description": "Ứng dụng web ôn tập toàn diện Hoá Học 11 (Chương 1: Cân bằng hoá học & Chương 2: Nitrogen – Sulfur theo bộ SGK/SBT Kết nối tri thức với cuộc sống). Gồm tóm tắt lý thuyết, flashcards, trắc nghiệm từng bài và đề kiểm tra tổng kết có lời giải KaTeX chuẩn xác.",
   "requestFramePermissions": [],
   "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
 }

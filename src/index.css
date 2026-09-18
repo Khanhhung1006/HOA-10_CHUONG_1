@@ -1,72 +1,84 @@
 @import "tailwindcss";
 
-:root {
-  --text-scale: 1;
+/* ==========================================================================
+   KaTeX Official Layout & Fraction Alignment Styles
+   Ensures accurate fraction rendering, prevents numerator/denominator overlap
+   ========================================================================== */
+
+/* 1. Ensure KaTeX elements use content-box so dimensions are accurate */
+.katex,
+.katex *,
+.katex *::before,
+.katex *::after {
+  box-sizing: content-box !important;
 }
 
-@layer utilities {
-  .perspective-1000 {
-    perspective: 1000px;
-  }
-  .transform-style-3d {
-    transform-style: preserve-3d;
-  }
-  .backface-hidden {
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
-  }
-  .rotate-y-180 {
-    transform: rotateY(180deg);
-  }
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
+/* 2. KaTeX base font and line-height */
+.katex {
+  font-size: 1.05em;
+  text-rendering: auto;
+  line-height: 1.2;
+  white-space: normal;
+  text-indent: 0;
 }
 
-/* Auto-flow & Mobile Reflow Standards */
-html, body {
-  padding-top: env(safe-area-inset-top);
-  padding-bottom: env(safe-area-inset-bottom);
-  overflow-x: hidden;
-  word-break: break-word;
-  overflow-wrap: anywhere;
-  -webkit-text-size-adjust: 100%;
-}
-
-button {
-  user-select: none;
-  -webkit-user-select: none;
-}
-
-/* Dynamic Proportional Scaler Base */
-.dynamic-text-scaler {
-  font-size: calc(1rem * var(--text-scale, 1));
-  line-height: calc(1.5 + (var(--text-scale, 1) - 1) * 0.12);
-}
-
-.dynamic-text-scaler p, 
-.dynamic-text-scaler li, 
-.dynamic-text-scaler td, 
-.dynamic-text-scaler th, 
-.dynamic-text-scaler span, 
-.dynamic-text-scaler div,
-.dynamic-text-scaler h1,
-.dynamic-text-scaler h2,
-.dynamic-text-scaler h3,
-.dynamic-text-scaler h4 {
-  max-width: 100%;
-  overflow-wrap: anywhere;
-  word-break: break-word;
-}
-
-/* Table auto-flow responsiveness */
-.responsive-table-wrapper {
-  width: 100%;
-  max-width: 100%;
+/* 3. KaTeX display formula wrapper */
+.katex-display {
+  display: block;
+  margin: 0.5em 0 !important;
+  text-align: center;
   overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
+  overflow-y: hidden;
+  padding: 0.25rem 0 !important;
+}
+
+.katex-display > .katex {
+  display: inline-block;
+  white-space: nowrap;
+  text-align: initial;
+}
+
+/* 4. Fraction line rule (prevent border-width: 0 from disappearing) */
+.katex .mfrac .frac-line {
+  display: inline-block;
+  width: 100%;
+  border-bottom-style: solid !important;
+  border-bottom-width: 0.05em !important;
+  min-height: 1px !important;
+}
+
+/* 5. 3D Perspective for Flashcards */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #475569;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
 }
